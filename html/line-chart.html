@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <canvas id="myCanvas" width="1000" height="800" style="border:1px solid #000000;"></canvas>
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    
+    <!-- draw grid lines -->
+    ctx.moveTo(100, 100);
+    ctx.lineTo(100, 700);
+    ctx.stroke();
+    ctx.moveTo(100, 700);
+    ctx.lineTo(900, 700);
+    ctx.stroke();
+    ctx.font = "30px Arial";
+    ctx.fillText("Over",850,760);
+    ctx.font = "30px Arial";
+    ctx.fillText("Runs",10,80);
+    
+    <!-- draw horizontal ticks -->
+    ctx.font = "20px Arial";
+    ctx.fillText("5",295,730);
+    ctx.moveTo(300, 690);
+    ctx.lineTo(300, 710);
+    ctx.stroke();
+    ctx.font = "20px Arial";
+    ctx.fillText("10",490,730);
+    ctx.moveTo(500, 690);
+    ctx.lineTo(500, 710);
+    ctx.stroke();
+    ctx.font = "20px Arial";
+    ctx.fillText("15",690,730);
+    ctx.moveTo(700, 690);
+    ctx.lineTo(700, 710);
+    ctx.stroke();
+    ctx.font = "20px Arial";
+    ctx.fillText("20",890,730);
+    ctx.moveTo(900, 690);
+    ctx.lineTo(900, 710);
+    ctx.stroke();
+    
+    <!-- draw vertical ticks -->
+    ctx.font = "20px Arial";
+    ctx.fillText("150",50,105);
+    ctx.moveTo(90, 100);
+    ctx.lineTo(110, 100);
+    ctx.stroke();
+    ctx.font = "20px Arial";
+    ctx.fillText("100",50,305);
+    ctx.moveTo(90, 300);
+    ctx.lineTo(110, 300);
+    ctx.stroke();
+    ctx.font = "20px Arial";
+    ctx.fillText("50",50,505);
+    ctx.moveTo(90, 500);
+    ctx.lineTo(110, 500);
+    ctx.stroke();
+    
+    <!-- draw line graph -->
+    ctx.moveTo(300, 540);
+    ctx.lineTo(500, 400);
+    ctx.stroke();
+    ctx.moveTo(500, 400);
+    ctx.lineTo(700, 140);
+    ctx.stroke();
+  </script>
+
+</body>
+</html>
